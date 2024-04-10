@@ -1,10 +1,8 @@
 {
-  "ruleID": "cf02bcfe4ffa45bf9367155ea9ec4f7f",
-  "name": "metamask-restoresweb.webflow.io",
-  "authorName": "",
-  "description": "Rule for metamask-restoresweb.webflow.io",
-  "meta": "",
-  "target": "",
+  "name": "metamask-restoresweb",
+  "author": "Daniel Demelash",
+  "description": "Scam site that claim to be MetaMask wallet restore page, metamask-restoresweb.webflow.io",
+  "target": "MetaMask",
   "composite_flag_conditions": {
     "match_condition": "all",
     "conditions": [
@@ -56,7 +54,7 @@
           {
             "attribute": "url",
             "operator": "contains",
-            "value": "metamask.com"
+            "value": "metamask.io"
           }
         ]
       }

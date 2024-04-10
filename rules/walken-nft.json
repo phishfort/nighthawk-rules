@@ -1,0 +1,68 @@
+{
+  "name": "walken-nft-web",
+  "author": "Daniel Demelash",
+  "description": "Rule for scam site that claim to give free Walken mint, similar to walken-nft.web.app",
+  "target": "Walken NFT Games",
+  "composite_flag_conditions": {
+    "match_condition": "all",
+    "conditions": [
+      {
+        "logical_operator": "and",
+        "conditions": [
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Mint Now"
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Mint is Live!",
+            "case_sensitive": true
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "hurry"
+          },
+          {
+            "attribute": "title",
+            "operator": "contains",
+            "value": "Walken Whitelist",
+            "case_sensitive": true
+          }
+        ]
+      },
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "walken-nft"
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Connecting healthy lifestyle, games & crypto"
+          }
+        ]
+      }
+    ]
+  },
+  "composite_false_positives": {
+    "match_condition": "any",
+    "conditions": [
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "walken.io"
+          }
+        ]
+      }
+    ]
+  }
+}
