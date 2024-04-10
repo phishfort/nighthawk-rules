@@ -1,0 +1,51 @@
+{
+  "name": "protocol-guard",
+  "author": "Daniel Demelash",
+  "description": "Rule for scam site that claim to be a Decentralized protocol for syncing various Wallets issues on Secure Server, similar to protocl-guard.web.app",
+  "target": "protocol guard",
+  "composite_flag_conditions": {
+    "match_condition": "all",
+    "conditions": [
+      {
+        "logical_operator": "and",
+        "conditions": [
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Decentralized protocol for syncing various Wallets issues on Secure Server."
+          },
+          {
+            "attribute": "title",
+            "operator": "contains",
+            "value": "Decentralized Dapps - We are help to help you resolve your crypto related issues"
+          }
+        ]
+      },
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "protocol-guard"
+          }
+        ]
+      }
+    ]
+  },
+  "composite_false_positives": {
+    "match_condition": "any",
+    "conditions": [
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "protocolguard.com"
+          }
+        ]
+      }
+    ]
+  }
+}
