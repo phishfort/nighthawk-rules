@@ -15,6 +15,21 @@
             "value": "Empowering the Next generation of Web3 users."
           },
           {
+            "attribute": "title",
+            "operator": "contains",
+            "value": "Multiverse"
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "The Wormhole airdrop is built for prior users, developers and community members that have actively engaged in the Wormhole ecosystem."
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Copyright 2020-2022 Launchpad (UAB) Ltd Reg No. 305865705. All rights reserved"
+          },
+          {
             "attribute": "html",
             "operator": "contains",
             "value": "The Wormhole airdrop is built for prior users, developers and community members that have actively engaged in the Wormhole ecosystem."
@@ -31,11 +46,11 @@
         "conditions": [
           {
             "attribute": "url",
-            "operator": "contains",
-            "value": "airdrop-wormhole.firebaseapp.com"
+            "operator": "equalToAny",
+            "value": "airdrop-wormhole.firebaseapp.com,airdrop-wormhole.web.app"
           },
           {
-            "attribute": "url",
+            "attribute": "html",
             "operator": "contains",
             "value": "Enter the Wormhole"
           }
