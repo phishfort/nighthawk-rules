@@ -1,0 +1,56 @@
+{
+  "name": "xend-finance",
+  "author": "Daniel Demelash",
+  "description": "Rule to detect scam site that are similar to migratexend-finance.vercel.app",
+  "target": "Xend finance",
+  "composite_flag_conditions": {
+    "match_condition": "all",
+    "conditions": [
+      {
+        "logical_operator": "and",
+        "conditions": [
+          {
+            "attribute": "title",
+            "operator": "contains",
+            "value": "Xend Finance: Secure Crypto Bank with 15% Interest"
+          },
+          {
+            "attribute": "footer",
+            "operator": "contains",
+            "value": "© 2024 Xend Finance"
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Xend Finance"
+          }
+        ]
+      },
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "migratexend-finance.vercel.app"
+          }
+        ]
+      }
+    ]
+  },
+  "composite_false_positives": {
+    "match_condition": "any",
+    "conditions": [
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "xend.finance"
+          }
+        ]
+      }
+    ]
+  }
+}
