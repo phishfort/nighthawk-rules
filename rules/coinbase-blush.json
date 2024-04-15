@@ -1,0 +1,56 @@
+{
+  "name": "coinbase-blush",
+  "author": "Daniel Demelash",
+  "description": "Scam site that claim to be coinbase page, coinbase-blush.vercel.app",
+  "target": "coinbase",
+  "composite_flag_conditions": {
+    "match_condition": "all",
+    "conditions": [
+      {
+        "logical_operator": "and",
+        "conditions": [
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Coinbase - Buy and Sell Bitcoin, Ethereum, and more with trust"
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "Do more with your crypto with Coinbase Wallet"
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "© 2024 Coinbase"
+          }
+        ]
+      },
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "coinbase-blush.vercel.app"
+          }
+        ]
+      }
+    ]
+  },
+  "composite_false_positives": {
+    "match_condition": "any",
+    "conditions": [
+      {
+        "logical_operator": "or",
+        "conditions": [
+          {
+            "attribute": "url",
+            "operator": "contains",
+            "value": "coinbase.com"
+          }
+        ]
+      }
+    ]
+  }
+}
