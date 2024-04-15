@@ -4,7 +4,7 @@
   "description": "Scam site that claim to be coinbase page, coinbase-blush.vercel.app",
   "target": "coinbase",
   "composite_flag_conditions": {
-    "match_condition": "all",
+    "match_condition": "any",
     "conditions": [
       {
         "logical_operator": "and",
@@ -32,7 +32,12 @@
           {
             "attribute": "url",
             "operator": "contains",
-            "value": "coinbase-blush.vercel.app"
+            "value": "coinbase-"
+          },
+          {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "coinbase"
           }
         ]
       }
