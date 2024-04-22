@@ -1,0 +1,57 @@
+{
+    "name": "swanchain",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be swanchain, similar to swanchain.vercel.app",
+    "target": "swanchain",
+    "composite_flag_conditions": {
+      "match_condition": "all",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "SWAN"
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "EMPOWER YOUR DAPPS WITH SWAN CHAIN"
+            },
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "Swan Chain | The Layer 2 Blockchain for AI Computing"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "swanchain"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "swanchain.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
