@@ -1,0 +1,62 @@
+{
+    "name": "metaswap",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be metaswap, similar to metaswap-frontend.vercel.app",
+    "target": "metaswap",
+    "composite_flag_conditions": {
+      "match_condition": "all",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "I acknowledge that by accessing Metaworth's whitepaper and informational materials, I am accepting the terms of service and confirming that Metaworth does not offer trading advice. I understand that I am solely responsible for my trading decisions and actions."
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Connect Wallet"
+            },
+            {
+            "attribute": "html",
+            "operator": "contains",
+            "value": "MetaSwap"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "metaswap-frontend.vercel.app"
+            },
+            {
+                "attribute": "title",
+                "operator": "contains",
+                "value": "MetaSwap"
+              }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "metaswap.io"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
