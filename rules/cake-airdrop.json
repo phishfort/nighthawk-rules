@@ -1,0 +1,67 @@
+{
+    "name": "cake-airdrop",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be Decentralized protocol, similar to cake-airdrop.pages.dev",
+    "target": "Pancakeswap & Cake DeFi",
+    "composite_flag_conditions": {
+      "match_condition": "all",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Get free coins CAKE! Airdrop from PancakeSwap right now!"
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Shaping the Future of Decentralized Trading:"
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "PancakeSwap’s Unstoppable Expansion"
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "claim airdrop"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "cake-airdrop.pages.dev"
+            },
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "Home | PancakeSwap"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "pancakeswap.finance"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
