@@ -1,0 +1,63 @@
+{
+    "name": "zerionweb3-dapp",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be Decentralized protocol, similar to zerionweb3-noderewards.pages.dev",
+    "target": "Decentralized Protocol",
+    "composite_flag_conditions": {
+      "match_condition": "all",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Decentralized protocol for syncing various Wallets issues on Secure Server."
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Connect Wallet"
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Select Sync Type",
+              "case_sensitive": true
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "dappmainhub.vercel.app/"
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Decentralized protocol for syncing various Wallets issues on Secure Server."
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "dappbay.bnbchain.org"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
