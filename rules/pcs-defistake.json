@@ -1,0 +1,62 @@
+{
+    "name": "pcs-defistake",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be Decentralized protocol, similar to ",
+    "target": "Pancakeswap & Cake DeFi",
+    "composite_flag_conditions": {
+      "match_condition": "all",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "Pancakeswap & Cake DeFi"
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Introducing Our Latest Bonus Event: Up to 15,000 USDT Bonus to be grab on our new launched Staking Increase & Recruitment Bonus programs."
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "© Pancakeswap & Cake DeFi 2023"
+            },
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "pcs-defistakeexc-v3.com"
+            },
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "pool-cakexdefi.com"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "pancakeswap.finance"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
