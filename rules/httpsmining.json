@@ -1,0 +1,62 @@
+{
+    "name": "httpsmining-eth",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be eth wallet/ mining site, similar to www.httpsmining-eth3.com/13001/remind.html",
+    "target": "ethermine.org",
+    "composite_flag_conditions": {
+      "match_condition": "all",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": ""
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "You are currently visiting a decentralized website,please run it in the wallet application"
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "Copy link"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "httpsmining-eth3.com"
+            },
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "Not in wallet"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "ethermine.org"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
