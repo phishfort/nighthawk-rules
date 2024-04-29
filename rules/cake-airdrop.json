@@ -4,7 +4,7 @@
     "description": "Rule for scam site that claim to be Decentralized protocol, similar to cake-airdrop.pages.dev",
     "target": "Pancakeswap & Cake DeFi",
     "composite_flag_conditions": {
-      "match_condition": "all",
+      "match_condition": "any",
       "conditions": [
         {
           "logical_operator": "and",
