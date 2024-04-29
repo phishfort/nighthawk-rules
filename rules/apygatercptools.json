@@ -40,6 +40,16 @@
                 "value": "We have varieties of wallets you can choose from to validate or synchronize your wallet. Please, select your correct wallet name before proceeding."
             }
           ]
+        },
+        {
+            "logical_operator":"or",
+            "conditions": [
+                {
+                    "attribute":"url",
+                    "operator":"contains",
+                    "value":"apygatercptools"
+                }
+            ]
         }
       ]
     },
