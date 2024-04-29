@@ -1,0 +1,67 @@
+{
+    "name": "pan-cake-swap",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be PancakeSwap, similar to pan-cake-swap.com",
+    "target": "Pancakeswap",
+    "composite_flag_conditions": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "PancakesSwaps makes it easy to make your crypto work for you."
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "PancakesSwaps has the most users of any decentralized platform, ever."
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "The moon is made of pancakes."
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "Connect Wallet"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "pan-cake-swap.com"
+            },
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "Home | PancakeSwap"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "pancakeswap.finance"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
