@@ -1,0 +1,51 @@
+{
+    "name": "idextr",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be Decentralized protocol, similar to idextr.com",
+    "target": "",
+    "composite_flag_conditions": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Buy & Sell Digital Assets In The IdexTR"
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "What Is IdexTR"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "idextr.com"
+            },
+            {
+                "attribute":"html",
+                "operator":"contains",
+                "value":"IdexTR is the easiest, safest, and fastest way to buy & sell crypto asset exchange. Are you ready to step into the world of the future on the first Metaverse crypto exchange?"
+            },
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "yeni mesaj"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": []
+    }
+  }
+  
