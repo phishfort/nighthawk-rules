@@ -12,11 +12,6 @@
             {
               "attribute": "html",
               "operator": "contains",
-              "value": ""
-            },
-            {
-              "attribute": "html",
-              "operator": "contains",
               "value": "You are currently visiting a decentralized website,please run it in the wallet application"
             },
             {

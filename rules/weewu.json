@@ -1,0 +1,46 @@
+{
+    "name": "weewu",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be the revolutionary crypto gaming metaverse on the Solana blockchain, similar to weewu.io",
+    "target": "",   
+    "composite_flag_conditions": {
+      "match_condition": "all",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Welcome to Weewu, the revolutionary crypto gaming metaverse on the Solana blockchain."
+            },
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "the weewu experience"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "weewu.io"
+            },
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "Weewu - Official Site"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": []
+    }
+  }
+  
