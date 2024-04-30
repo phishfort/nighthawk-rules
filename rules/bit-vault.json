@@ -1,0 +1,56 @@
+{
+    "name": "bit-vault-vercel",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to bit-vault, such as to bit-vault.vercel.app",
+    "target": "bit-vault",
+    "composite_flag_conditions": {
+      "match_condition": "any",
+      "conditions": [
+        {
+          "logical_operator": "and",
+          "conditions": [
+            {
+              "attribute": "html",
+              "operator": "contains",
+              "value": "Embrace Blockchain Innovation"
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "Every digital artwork on is authentic and truly unique. Blockchain technology makes this new approach to digital ownership possible."
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "Connect Wallet"
+            },
+            {
+                "attribute": "html",
+                "operator": "contains",
+                "value": "Decentralized Blockchain Technology"
+            }
+          ]
+        },
+        {
+          "logical_operator": "or",
+          "conditions": [
+            {
+              "attribute": "url",
+              "operator": "contains",
+              "value": "bit-vault.vercel.app"
+            },
+            {
+              "attribute": "title",
+              "operator": "contains",
+              "value": "Bit Vault"
+            }
+          ]
+        }
+      ]
+    },
+    "composite_false_positives": {
+      "match_condition": "any",
+      "conditions": []
+    }
+  }
+  
