@@ -33,11 +33,6 @@
             "attribute": "url",
             "operator": "contains",
             "value": "coinbase-"
-          },
-          {
-            "attribute": "html",
-            "operator": "contains",
-            "value": "coinbase"
           }
         ]
       }
