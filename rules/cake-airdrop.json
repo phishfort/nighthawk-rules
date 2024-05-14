@@ -27,7 +27,7 @@
           {
             "attribute": "html",
             "operator": "contains",
-            "value": "claim airdrop"
+            "value": "Claim airdrop"
           }
         ]
       },
