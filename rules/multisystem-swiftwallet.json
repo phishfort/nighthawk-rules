@@ -2,7 +2,7 @@
     "name": "multisystem-swiftwallet",
     "author": "Daniel Demelash",
     "description": "Rule for scam site that claim to communicate securely between wallets and Dapps, similar to multisystem-swiftwallet.firebaseapp.com",
-    "target": "ethermine.org",
+    "target": "synchronizer-panel",
     "composite_flag_conditions": {
         "match_condition": "all",
         "conditions": [
