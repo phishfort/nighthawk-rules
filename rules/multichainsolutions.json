@@ -1,0 +1,45 @@
+{
+    "name": "multichainsolutions",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site Dapps, similar to multichainsolutiions.firebaseapp.com",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "COIN NODE is an open protocol to communicate securely between Wallets and Dapps (Web3 Apps)."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The protocol establishes a remote connection using a Bridge server."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect wallet"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "MANUALSYNCINGDAPP - Bitcoin And Crypto Currency"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
