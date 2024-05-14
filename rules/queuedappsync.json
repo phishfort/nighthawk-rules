@@ -1,0 +1,50 @@
+{
+    "name": "queuedappsync",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site Dapps, similar to queuedappsync.vercel.app",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect Dapps"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Coin Dapps is a decentralized platform and network that blends Blockchain with Defi, incorporating Blockchain aspects such as non-custodial management, Micropools, rapid liquidity, and decentralized governance. Each procedure must be completed in its entirety."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The authentication of wallet will be finished as follows."
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "New Tools –Connect Dapp Web"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "DeFi Protocol - Bitcoin And Crypto Currency"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
