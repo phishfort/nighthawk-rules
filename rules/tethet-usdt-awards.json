@@ -1,0 +1,40 @@
+{
+    "name": "tethet-usdt-awards",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be USDT awards, similar to tethet-usdt-awarrds.github.io",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Tether"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Tether Giveaway"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "This is our appreciation for you who are still loyal this year,  We're giving away 2500 USDT For you"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Claim Now"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
