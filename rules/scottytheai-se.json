@@ -1,0 +1,76 @@
+{
+    "name": "scottytheai-se",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be Decentralized protocol, similar to scottytheai-se.firebaseapp.com",
+    "target": "Scottytheai",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "© 2023 by Scotty Ai. All rights reserved!"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Unleash the Scotty Army! Join the Crypto Revolution!"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Claim your free $SCOTTY Token"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "What Is $Scotty?"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Buy Now"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Claim Is Live"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "scottytheai"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Scotty AI | Top Crypto AI Platform"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "scottytheai.com"
+                    }
+                ]
+            }
+        ]
+    }
+}
