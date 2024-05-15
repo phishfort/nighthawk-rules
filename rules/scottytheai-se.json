@@ -47,7 +47,7 @@
                     {
                         "attribute": "url",
                         "operator": "contains",
-                        "value": "cake-airdrop.pages.dev"
+                        "value": "scottytheai"
                     },
                     {
                         "attribute": "title",
@@ -67,7 +67,7 @@
                     {
                         "attribute": "url",
                         "operator": "contains",
-                        "value": "pancakeswap.finance"
+                        "value": "scottytheai.com"
                     }
                 ]
             }
