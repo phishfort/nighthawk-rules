@@ -1,0 +1,50 @@
+{
+    "name": "gensis-wallet",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be Wallet Rectification, similar to genesis-wallet.vercel.app",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Blockchain Rectification"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Every digital artwork on is authentic and truly unique. Blockchain technology makes this new approach to digital ownership possible."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "decentralized protocol"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "for syncing various Wallets issues on Secure Server."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Copyright © 2023 Blockchain Rectification . All rights reserved."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect Wallet"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
