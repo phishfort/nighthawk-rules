@@ -1,7 +1,7 @@
 {
-    "name": "walletvalidators",
+    "name": "webbnode",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site that claim to be Blockchain Rectification app, similar to www.walletvalidators.dev",
+    "description": "Rule for scam site , similar to webbnode.com",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -10,34 +10,31 @@
                 "logical_operator": "and",
                 "conditions": [
                     {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "CONNECT YOUR WALLET"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "TO ACCESS TOOL, CONNECT YOUR WALLET BELOW AND APRROVE ALL CONNECTIONS."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "CONNECT AUTOMATICALLY",
+                        "case_sensitive": true
+                    },
+                    {
                         "attribute": "title",
                         "operator": "contains",
-                        "value": "Node System"
+                        "value": "connect"
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Select Chain"
-                    },
-                    {
-                        "attribute": "html",
-                        "operator": "contains",
-                        "value": "Open and decentralized protocol for syncing various Wallets issues on Secure Server."
-                    },
-                    {
-                        "attribute": "html",
-                        "operator": "contains",
-                        "value": "Blockchain technology makes this new approach to digital ownership possible."
-                    },
-                    {
-                        "attribute": "html",
-                        "operator": "contains",
-                        "value": "Connect Wallet"
-                    },
-                    {
-                        "attribute": "html",
-                        "operator": "contains",
-                        "value": "Copyright © 2023 Blocknode+ Rectification . All rights reserved."
+                        "value": "CONNECT MANUALLY",
+                        "case_sensitive": true
                     }
                 ]
             }
