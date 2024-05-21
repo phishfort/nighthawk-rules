@@ -1,7 +1,7 @@
 {
     "name": "webbnode",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site , similar to webbnode.com",
+    "description": "Rule for scam site , similar to webbnode.com, trustnodes.net, walletnodes.net",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
