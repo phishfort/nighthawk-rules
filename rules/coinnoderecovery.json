@@ -1,0 +1,40 @@
+{
+    "name": "coinnoderecovery",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site, such as live.coinnoderecovery.com",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "All Fix to Web3 In One Place | Coin Nodes Recovery"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The protocol establishes a remote connection using a Bridge server."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Coin Nodes Recovery"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Ready to resolve your blockchain issues?"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
