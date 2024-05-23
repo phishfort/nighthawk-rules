@@ -1,0 +1,51 @@
+{
+    "name": "nanodexportals",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to be advanced decentralized protocol for wallets, such as nanodexportals.com/nanoportals.com/en/index.html",
+    "target": "evmresolve",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "EVM Resolve"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Advanced AI decentralized protocol for wallets."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Restore your Account"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "CONNECT"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "maindappnetwork.com"
+                    }
+                ]
+            }
+        ]
+    }
+}
