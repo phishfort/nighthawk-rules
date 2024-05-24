@@ -1,0 +1,55 @@
+{
+    "name": "crypto-pay",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , similar to crypto-pay.exchange",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Reliable Crypto Trading"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Trade and Invest in Cryptocurrencies with Ease"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Enjoy the convenience of EDIT’s crypto"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "EDIT | Cryptocurrency trading and invest platform"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "EDIT 2024 © All right reserved"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "crypto-pay.exchange"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
