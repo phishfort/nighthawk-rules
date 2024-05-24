@@ -1,0 +1,55 @@
+{
+    "name": "coinux",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , similar to crypto-pay.exchange, coinux.net",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Reliable Crypto Trading"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Trade and Invest in Cryptocurrencies with Ease"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Enjoy the convenience of YukiTale’s crypto trading"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "YukiCode.dev | Cryptocurrency trading and invest platform"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "YukiTale 2024 © All right reserved"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "coinux.net"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
