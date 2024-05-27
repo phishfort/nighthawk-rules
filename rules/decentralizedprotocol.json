@@ -1,7 +1,7 @@
 {
     "name": "decentralizeprotocol",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site that claim to sync wallets, such as decentralizeprotocol.web.app",
+    "description": "Rule for scam site that claim to sync wallets, such as decentralizeprotocol.web.app, decentralizeprotocol.firebaseapp.com",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "all",
@@ -43,6 +43,11 @@
                         "attribute": "url",
                         "operator": "contains",
                         "value": "decentralizeprotocol.web.app"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "decentralizeprotocol.firebaseapp.com"
                     }
                 ]
             }
