@@ -1,0 +1,66 @@
+{
+    "name": "dappwallet-in",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site, such as dappwallet.in",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Rewards!!"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Enhance your protection against hacking: Secure your wallet indefinitely with a one-time fee of"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "200 USDT."
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "dapp"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Register Now"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Home - All Interconnect"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Wallet Rectify"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Validate, Synchronize, Secure and Protect Wallet Against Hackers"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "attribute": "url",
+                "operator": "contains",
+                "value": "interconnect"
+            }
+        ]
+    }
+}
