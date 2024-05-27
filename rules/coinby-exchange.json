@@ -1,0 +1,55 @@
+{
+    "name": "coinbuy-exchange",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , similar coinbuy.exchange",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Reliable Crypto Trading"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Trade and Invest in Cryptocurrencies with Ease"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Enjoy the convenience CoinBuy’s crypto trading"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "EDIT | Cryptocurrency trading and invest platform"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "CoinBuy 2024 © All right reserved"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "coinbuy.exchange"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
