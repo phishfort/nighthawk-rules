@@ -1,0 +1,55 @@
+{
+    "name": "decentralizeprotocol",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to sync wallets, such as decentralizeprotocol.web.app",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Validate, initialize, "
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Open And Decentralized Protocol For Syncing Various Wallets"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Validate Wallet"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": " Decentralized "
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Select Your Wallet"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "decentralizeprotocol.web.app"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
