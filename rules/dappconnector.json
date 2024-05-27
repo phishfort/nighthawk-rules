@@ -1,0 +1,61 @@
+{
+    "name": "dappconnector",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to sync wallets, such as dappconnector.app",
+    "target": "walletconnect",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Open protocol to communicate securely between Wallets and Dapps (Web3 Apps)."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Home | DappsConnector"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "DappsConnector"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "dappconnector.app"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "walletconnect.com"
+                    }
+                ]
+            }
+        ]
+    }
+}
