@@ -1,7 +1,7 @@
 {
     "name": "integratedchainfixers",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site, such as integratedchainfixers.org",
+    "description": "Rule for scam site, such as integratedchainfixers.org,launchdapp-connection.pages.dev",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
