@@ -1,0 +1,60 @@
+{
+    "name": "generic-rule-httrack",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that are created by HTTrack, look for some cypto related keywords and the HTTrack signature",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "<!-- Mirrored from"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "by HTTrack Website Copier/3.x [XR&CO'2014],"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "<!-- Added by HTTrack -->"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Validate Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "1. Connect your wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "dapp"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
