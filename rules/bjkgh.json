@@ -23,17 +23,7 @@
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": " protocol for syncing various Wallets to Dapps Secure Server"
-                    },
-                    {
-                        "attribute": "html",
-                        "operator": "contains",
                         "value": "Validate Wallet"
-                    },
-                    {
-                        "attribute": "title",
-                        "operator": "contains",
-                        "value": "Decentralized Launchpad"
                     },
                     {
                         "attribute": "html",
