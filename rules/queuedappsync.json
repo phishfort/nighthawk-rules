@@ -17,27 +17,22 @@
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Coin Dapps is a decentralized platform and network that blends Blockchain with Defi, incorporating Blockchain aspects such as non-custodial management, Micropools, rapid liquidity, and decentralized governance. Each procedure must be completed in its entirety."
+                        "value": "Coin Dapps is a decentralized platform and network"
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "The authentication of wallet will be finished as follows."
-                    }
-                ]
-            },
-            {
-                "logical_operator": "or",
-                "conditions": [
+                        "value": "Giveaway"
+                    },
                     {
-                        "attribute": "title",
+                        "attribute": "html",
                         "operator": "contains",
-                        "value": "New Tools –Connect Dapp Web"
+                        "value": "Rectification"
                     },
                     {
                         "attribute": "title",
                         "operator": "contains",
-                        "value": "DeFi Protocol - Bitcoin And Crypto Currency"
+                        "value": "New Tools –Connect Dapp Web"
                     }
                 ]
             }
