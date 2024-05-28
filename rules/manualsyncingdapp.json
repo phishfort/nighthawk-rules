@@ -1,7 +1,7 @@
 {
-    "name": "queuedappsync",
+    "name": "manualsyncingdapp",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site Dapps, similar to queuedappsync.vercel.app",
+    "description": "Rule for scam site Dapps, similar to manualsyncingdapp.netlify.app",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -17,18 +17,13 @@
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Manual Syncing Dapp  is a decentralized platform and network that blends Blockchain with DeFi, incorporating Blockchain aspects such as non-custodial management, Micropools, rapid liquidity, and decentralized governance."
+                        "value": "Manual Syncing Dapp  is a decentralized platform and network that blends Blockchain with DeFi"
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Each procedure must be completed in its entirety. The authentication of wallet will be finished as follows"
-                    }
-                ]
-            },
-            {
-                "logical_operator": "or",
-                "conditions": [
+                        "value": "<!-- Added by HTTrack -->"
+                    },
                     {
                         "attribute": "title",
                         "operator": "contains",
