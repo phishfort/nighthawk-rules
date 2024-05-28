@@ -1,0 +1,72 @@
+{
+    "name": "bjkgyh",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to sync wallets, such as bjkgyh.pages.dev",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "BND",
+                        "case_sensitive": true
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Open and decentralized"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Validate Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "<!-- Mirrored from"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "by HTTrack Website Copier/3.x [XR&CO'2014],"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "<!-- Added by HTTrack -->"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "bjkgyh.pages.dev"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "walletconnect.com"
+                    }
+                ]
+            }
+        ]
+    }
+}
