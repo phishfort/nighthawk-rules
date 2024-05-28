@@ -1,0 +1,55 @@
+{
+    "name": "api-webchainfix",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site similar to api-webchainfix.pages.dev",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Blockchain Dapps "
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "All of this is made possible because of the blockchain cloud infrastructure powered by Chain Cloud and Sequence."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "You can also connect your wallet by selecting any of the"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Blockchain Dapp Sync - One wallet, Blockchain support"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "© 2023. Blockchain Wallet Rectification."
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "api-webchainfix.pages.dev"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
