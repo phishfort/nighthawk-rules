@@ -1,0 +1,65 @@
+{
+    "name": "mtrustwallet",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , similar to mtrustwallet.com",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Trustworthy Crypto Services"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "mTrustWallet Gallery"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Welcome to the Exciting World of mTrustWallet - Where Innovation Meets Opportunity!"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Join the Revolution"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Unlock the potential for massive returns. Invest smartly with mTrustWallet.com."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "© 2024 mTrustWallet. All Rights Reserved."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Unleash the Power of Cryptocurrency with mTrustWallet - Join the Revolution Today!"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "mtrustwallet.com"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
