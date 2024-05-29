@@ -1,0 +1,50 @@
+{
+    "name": "extensiondapp",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site, suck as extensiondapp.pages.dev",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Open and Decentralized Protocol For Syncing Various Wallets to"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Validate Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Decentralized Launchpad"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "extensiondapp.pages.dev"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
