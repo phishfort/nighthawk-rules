@@ -1,0 +1,61 @@
+{
+    "name": "cryptohubinc",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site similar to cryptohubinc.ru",
+    "target": "nexuswap",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "NexuSwap"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Reliable and convenient cryptocurrency exchange"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The main value that we have is our reputation and the trust of our customers, whichconfirms over 20,000 positive reviews"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Proceed to payment"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Choose an exchange direction from the lists below"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "cryptohubinc.ru"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "attribute": "url",
+                "operator": "contains",
+                "value": "nexuswap.net"
+            }
+        ]
+    }
+}
