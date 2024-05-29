@@ -1,0 +1,60 @@
+{
+    "name": "multidappsresolve",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site, suck as multidappsresolve.com,dapps-resolve.com",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "© 2023 Multi Dapps Integration"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Multi Dapps Integration"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Select Network"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Streamlined wallet selection interface."
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "multidappsresolve.com"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "dapps-resolve.com"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
