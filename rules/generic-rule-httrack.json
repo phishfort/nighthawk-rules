@@ -48,6 +48,11 @@
                         "attribute": "html",
                         "operator": "contains",
                         "value": "dapp"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Open and decentralized protocol"
                     }
                 ]
             }
