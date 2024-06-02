@@ -53,6 +53,11 @@
                         "attribute": "html",
                         "operator": "contains",
                         "value": "Open and decentralized protocol"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "coinsolutions"
                     }
                 ]
             }
