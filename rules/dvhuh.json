@@ -1,0 +1,50 @@
+{
+    "name": "dvhuh",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to manage d/t wallets, such as dvhuh.pages.dev",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "See the future."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Get Started"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "12/18/24-word recovery phrase"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "dvhuh.pages.dev"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
