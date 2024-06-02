@@ -1,0 +1,50 @@
+{
+    "name": "encrypteddappsfix",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site, such as encrypteddappsfix.pages.dev",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Decentralized Launchpad"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Open and decentralized protocol for syncing various Wallets"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Validate Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Select Your Wallet"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "encrypteddappsfix.pages.dev"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
