@@ -1,7 +1,7 @@
 {
     "name": "dappconnector",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site that claim to sync wallets, such as dappconnector.app",
+    "description": "Rule for scam site that claim to sync wallets, such as dappconnector.app, dogecoin20resolve.pages.dev",
     "target": "walletconnect",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -38,6 +38,11 @@
                         "attribute": "url",
                         "operator": "contains",
                         "value": "dappconnector.app"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "dogecoin20resolve.pages.dev"
                     }
                 ]
             }
