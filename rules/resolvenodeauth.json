@@ -1,7 +1,7 @@
 {
     "name": "resolvenodeauth",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site, similar to resolvenodeauth.pages.dev, swiftdefiauth.pages.dev, multichaindefiresolve.pages.dev",
+    "description": "Rule for scam site, similar to resolvenodeauth.pages.dev, swiftdefiauth.pages.dev, multichaindefiresolve.pages.dev, blockresolveweb.pages.dev",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
