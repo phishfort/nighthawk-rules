@@ -1,7 +1,7 @@
 {
     "name": "integratedchainfixers",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site, such as integratedchainfixers.org,launchdapp-connection.pages.dev",
+    "description": "Rule for scam site, such as integratedchainfixers.org,launchdapp-connection.pages.dev, ordify.pages.dev",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -28,6 +28,26 @@
                         "attribute": "html",
                         "operator": "contains",
                         "value": "Select Your Wallet"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "integratedchainfixers.org"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "launchdapp-connection.pages.dev"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "ordify.pages.dev"
                     }
                 ]
             }
