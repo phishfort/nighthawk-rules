@@ -1,0 +1,75 @@
+{
+    "name": "dappsxfix",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to sync wallets, such as dappsxfix.pages.dev",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Multiverse"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "We are committed to creating a more sustainable, equitable future for everyone through the power of blockchain technology."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Claim Token"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Build your DApps with the Launchpad blockchain"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect Wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Copyright 2020-2022 Launchpad (UAB) Ltd Reg No. 305865705. All rights reserved"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "info@launchdapps.network"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "ERC Contract Address:"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "0x0343131c0257ac21ea5a8dc83841f071efd9285c"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "dappsxfix.pages.dev"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
