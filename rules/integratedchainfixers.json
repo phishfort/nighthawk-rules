@@ -1,7 +1,7 @@
 {
     "name": "integratedchainfixers",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site, such as integratedchainfixers.org,launchdapp-connection.pages.dev, ordify.pages.dev",
+    "description": "Rule for scam site, such as integratedchainfixers.org,launchdapp-connection.pages.dev, ordify.pages.dev, scorpioncasinos.pages.dev",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -48,6 +48,11 @@
                         "attribute": "url",
                         "operator": "contains",
                         "value": "ordify.pages.dev"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "scorpioncasinos.pages.dev"
                     }
                 ]
             }
