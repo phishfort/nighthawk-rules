@@ -1,5 +1,5 @@
 {
-    "name": "dappsvalidator",
+    "name": "blocksapprectification",
     "author": "Daniel Demelash",
     "description": "Rule for scam site that claim to sync wallets, such as blocksapprectification.pages.dev",
     "target": "walletconnect",
