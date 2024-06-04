@@ -1,0 +1,71 @@
+{
+    "name": "dappsvalidator",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to sync wallets, such as blocksapprectification.pages.dev",
+    "target": "walletconnect",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Every digital artwork on Upside is authentic and truly unique."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Open and decentralized protocol for syncing various Wallets"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Make Your Selection Below"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Copyright © 2023 Blocknode+ Rectification."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect Wallet"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Blockchain Rectification"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "blocksapprectification.pages.dev"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "walletconnect.com"
+                    }
+                ]
+            }
+        ]
+    }
+}
