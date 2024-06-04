@@ -1,0 +1,60 @@
+{
+    "name": "dappsxfix",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to sync wallets, such as syncvalidator.firebaseapp.com, syncvalidator.web.app",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "all",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "syncweb"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Dapps Sync"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The Best Cryptocurrency Synchronization Platform"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Kindly select the issue you have from the list below"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "wallets.html"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "syncvalidator.web.app"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "syncvalidator.firebaseapp.com"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
