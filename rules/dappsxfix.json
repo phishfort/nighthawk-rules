@@ -1,7 +1,7 @@
 {
     "name": "dappsxfix",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site that claim to sync wallets, such as dappsxfix.pages.dev",
+    "description": "Rule for scam site that claim to sync wallets, such as dappsxfix.pages.dev, smartdapp.pages.dev",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "all",
@@ -11,8 +11,8 @@
                 "conditions": [
                     {
                         "attribute": "title",
-                        "operator": "contains",
-                        "value": "Multiverse"
+                        "operator": "equalToAny",
+                        "value": "Multiverse, Multichain, Multitoken"
                     },
                     {
                         "attribute": "html",
@@ -63,6 +63,11 @@
                         "attribute": "url",
                         "operator": "contains",
                         "value": "dappsxfix.pages.dev"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "smartdapp.pages.dev"
                     }
                 ]
             }
