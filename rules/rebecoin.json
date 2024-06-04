@@ -1,0 +1,55 @@
+{
+    "name": "rebecoin",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , similar to rebecoin.com",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Reliable Crypto Trading"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Trade and Invest in Cryptocurrencies with Ease"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Trade anywhere and anytime with Rebecoin"
+                    },
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "REBECOIN.COM | Cryptocurrency trading and invest platform"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Rebecoin 2024 © All right reserved"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "rebecoin.com"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
