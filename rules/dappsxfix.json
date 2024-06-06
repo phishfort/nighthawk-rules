@@ -73,6 +73,11 @@
                         "attribute": "url",
                         "operator": "contains",
                         "value": "dappsfixed.pages.dev"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "dappsapp.pages.dev"
                     }
                 ]
             }
