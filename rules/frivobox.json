@@ -1,7 +1,7 @@
 {
-    "name": "coin24",
+    "name": "frivobox",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site , similar to coin24.app",
+    "description": "Rule for scam site , similar to frivobox.com",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -12,27 +12,27 @@
                     {
                         "attribute": "title",
                         "operator": "contains",
-                        "value": "Instant Cryptocurrency Exchange | Coin24 | Australia"
+                        "value": "Frivo-Welcome Page"
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Select assets to swap"
+                        "value": "Frivobox has an online server which gets you across to every wallet representative to enable effective complain and rectification of issues. "
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Exchange"
+                        "value": "Connect Wallet"
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Coin24 is a cryptocurrency exchange service that aggregates a number of top exchanges and allows traders to swap one crypto into another."
+                        "value": "Explore endless possibilities with Frivo"
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "© coin24 2019"
+                        "value": "Blockchain Rectification"
                     }
                 ]
             }
