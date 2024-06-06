@@ -1,7 +1,7 @@
 {
     "name": "dappsxfix",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site that claim to sync wallets, such as dappsxfix.pages.dev, smartdapp.pages.dev,dappsfixed.pages.dev",
+    "description": "Rule for scam site that claim to sync wallets, such as dappsxfix.pages.dev, smartdapp.pages.dev,dappsfixed.pages.dev, dappsapp.pages.dev",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
