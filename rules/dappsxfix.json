@@ -32,7 +32,7 @@
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Connect Wallet"
+                        "value": "Connect wallet"
                     },
                     {
                         "attribute": "html",
