@@ -1,5 +1,5 @@
 {
-    "name": "dappsxfix",
+    "name": "syncvalidator",
     "author": "Daniel Demelash",
     "description": "Rule for scam site that claim to sync wallets, such as syncvalidator.firebaseapp.com, syncvalidator.web.app",
     "target": "",
