@@ -1,0 +1,46 @@
+{
+    "name": "coin24",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , similar to coin24.app",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Instant Cryptocurrency Exchange | Coin24 | Australia"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Select assets to swap"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Exchange",
+                        "case_sensitive": true
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Coin24 is a cryptocurrency exchange service that aggregates a number of top exchanges and allows traders to swap one crypto into another."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "© coin24 2019"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
