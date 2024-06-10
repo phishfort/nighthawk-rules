@@ -1,7 +1,7 @@
 {
-    "name": "cdxep",
+    "name": "dappswalletnodes",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site , similar to cdxep.co",
+    "description": "Rule for scam site , similar to dappswalletnodes.firebaseapp.com",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -10,24 +10,24 @@
                 "logical_operator": "and",
                 "conditions": [
                     {
-                        "attribute": "title",
+                        "attribute": "html",
                         "operator": "contains",
-                        "value": "Home - CDXCOIN"
+                        "value": "Decentralized Platform Wallet"
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "The world's best virtual asset trading platform"
+                        "value": "Dapp Walletnode is a decentralized protocol."
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "All rights reserved＠support@cdxep.co。CDXCOINIs a service company for virtual currency transactions"
+                        "value": "Wallet Synching allows developers to create new online tools, many of which have piqued the interest of global business markets."
                     },
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "Trade Now"
+                        "value": "Claim Rewards"
                     }
                 ]
             }
