@@ -1,0 +1,45 @@
+{
+    "name": "cdxep.co",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , similar to cdxep.co",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Home - CDXCOIN"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The world's best virtual asset trading platform"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "All rights reserved＠support@cdxep.co。CDXCOINIs a service company for virtual currency transactions"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Trade Now"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The world's best virtual asset trading platform"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
