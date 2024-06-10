@@ -1,7 +1,7 @@
 {
-    "name": "cdxep.co",
+    "name": "cextd.co",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site , similar to cdxep.co",
+    "description": "Rule for scam site , similar to cextd.co",
     "target": "",
     "composite_flag_conditions": {
         "match_condition": "any",
@@ -12,7 +12,7 @@
                     {
                         "attribute": "title",
                         "operator": "contains",
-                        "value": "Home - CDXCOIN"
+                        "value": "Home - CEX·TD"
                     },
                     {
                         "attribute": "html",
@@ -22,7 +22,7 @@
                     {
                         "attribute": "html",
                         "operator": "contains",
-                        "value": "All rights reserved＠support@cdxep.co。CDXCOINIs a service company for virtual currency transactions"
+                        "value": "All rights reserved＠2023CEX·TD-trade.com。CEX·TDIs a service company for virtual currency transactions"
                     },
                     {
                         "attribute": "html",
