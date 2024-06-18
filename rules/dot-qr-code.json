@@ -1,0 +1,45 @@
+{
+    "name": "dot-qr-code",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that claim to generate DOT QR code , similar to dot-qr-code-generator.com",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "DOT QR Code Generator"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "DOT address:"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Generate QR Code"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "QR code for your DOT address"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Enter your address"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
