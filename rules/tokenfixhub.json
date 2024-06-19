@@ -1,0 +1,45 @@
+{
+    "name": "tokenfixhub",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site, similar to tokenfixhub.com/",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Decentralized wallet fix"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Decentralized Wallet Fix © All rights reserved."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Decentralized Wallet Fix is an open protocol to communicate securely between Wallets and DApps (Decentralized Apps)."
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "tokenfixhub.com"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": []
+    }
+}
