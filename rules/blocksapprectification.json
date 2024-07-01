@@ -4,7 +4,7 @@
     "description": "Rule for scam site that claim to sync wallets, such as blocksapprectification.pages.dev",
     "target": "walletconnect",
     "composite_flag_conditions": {
-        "match_condition": "all",
+        "match_condition": "any",
         "conditions": [
             {
                 "logical_operator": "and",
