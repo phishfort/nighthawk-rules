@@ -1,0 +1,71 @@
+{
+    "name": "multichaingeneric",
+    "author": "Daniel Demelash",
+    "description": "generic rule for scam site that claim to be multichain",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Multi"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Empowering the Next generation of Web3 users."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Claim Token"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Build your DApps with the Launchpad blockchain"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Connect wallet"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Copyright 2020-2022 Launchpad (UAB) Ltd Reg No. 305865705. All rights reserved"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "info@launchdapps.network"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "multichain.xyz"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "multichain.com"
+                    }
+                ]
+            }
+        ]
+    }
+}
