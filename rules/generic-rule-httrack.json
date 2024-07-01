@@ -23,6 +23,11 @@
                         "attribute": "html",
                         "operator": "contains",
                         "value": "<!-- Added by HTTrack -->"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "<!-- /Added by HTTrack -->"
                     }
                 ]
             },
@@ -58,6 +63,11 @@
                         "attribute": "html",
                         "operator": "contains",
                         "value": "coinsolutions"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "polkadot"
                     }
                 ]
             }
