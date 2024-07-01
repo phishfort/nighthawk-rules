@@ -1,0 +1,61 @@
+{
+    "name": "tradehivehub",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site , tradehivehub.com",
+    "target": "polotrade.site",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "tradehivehub – Best trading and Investment Platform"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "At tradehivehub,"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "©Trade Hive Hub 2024. All Rights Reserved."
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "Take control of your financial future"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "tradehivehub.com"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "polotrade.site"
+                    }
+                ]
+            }
+        ]
+    }
+}
