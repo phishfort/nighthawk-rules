@@ -1,0 +1,61 @@
+{
+    "name": "polkad",
+    "author": "Daniel Demelash",
+    "description": "Rule for scam site that target polkadot, polkad.xyz",
+    "target": "",
+    "composite_flag_conditions": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "and",
+                "conditions": [
+                    {
+                        "attribute": "title",
+                        "operator": "contains",
+                        "value": "Polkadot: Web3 Interoperability | Decentralized Blockchain"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "polkadot"
+                    },
+                    {
+                        "attribute": "html",
+                        "operator": "contains",
+                        "value": "The blockspace ecosystem for boundless innovation"
+                    }
+                ]
+            },
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "polkad.xyz"
+                    }
+                ]
+            }
+        ]
+    },
+    "composite_false_positives": {
+        "match_condition": "any",
+        "conditions": [
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "polkadot.network"
+                    },
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "polkadot.js"
+                    }
+                ]
+            }
+        ]
+    }
+}
