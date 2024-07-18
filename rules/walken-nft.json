@@ -4,7 +4,7 @@
   "description": "Rule for scam site that claim to give free Walken mint, similar to walken-nft.web.app",
   "target": "Walken NFT Games",
   "composite_flag_conditions": {
-    "match_condition": "all",
+    "match_condition": "any",
     "conditions": [
       {
         "logical_operator": "and",
@@ -17,8 +17,7 @@
           {
             "attribute": "html",
             "operator": "contains",
-            "value": "Mint is Live!",
-            "case_sensitive": true
+            "value": "Mint is Live!"
           },
           {
             "attribute": "html",
@@ -28,23 +27,7 @@
           {
             "attribute": "title",
             "operator": "contains",
-            "value": "Walken Whitelist",
-            "case_sensitive": true
-          }
-        ]
-      },
-      {
-        "logical_operator": "or",
-        "conditions": [
-          {
-            "attribute": "url",
-            "operator": "contains",
-            "value": "walken-nft"
-          },
-          {
-            "attribute": "html",
-            "operator": "contains",
-            "value": "Connecting healthy lifestyle, games & crypto"
+            "value": "Walken Whitelist"
           }
         ]
       }

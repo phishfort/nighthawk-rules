@@ -66,7 +66,7 @@ Here's an example of a rule in JSON format:
   "description": "Rule for scam site that claim to give free Walken mint, similar to walken-nft.web.app",
   "target": "Walken NFT Games",
   "composite_flag_conditions": {
-    "match_condition": "all",
+    "match_condition": "any",
     "conditions": [
       {
         "logical_operator": "and",
@@ -95,21 +95,7 @@ Here's an example of a rule in JSON format:
           }
         ]
       },
-      {
-        "logical_operator": "or",
-        "conditions": [
-          {
-            "attribute": "url",
-            "operator": "contains",
-            "value": "walken-nft"
-          },
-          {
-            "attribute": "html",
-            "operator": "contains",
-            "value": "Connecting healthy lifestyle, games & crypto"
-          }
-        ]
-      }
+      
     ]
   },
   "composite_false_positives": {
