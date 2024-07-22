@@ -1,8 +1,8 @@
 {
     "name": "polkad",
     "author": "Daniel Demelash",
-    "description": "Rule for scam site that target polkadot, polkad.xyz",
-    "target": "",
+    "description": "Rule for scam site that target polkadot",
+    "target": "Polkadot",
     "composite_flag_conditions": {
         "match_condition": "any",
         "conditions": [
