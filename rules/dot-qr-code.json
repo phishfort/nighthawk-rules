@@ -40,6 +40,17 @@
     },
     "composite_false_positives": {
         "match_condition": "any",
-        "conditions": []
+        "conditions": [
+            {
+                "logical_operator": "or",
+                "conditions": [
+                    {
+                        "attribute": "url",
+                        "operator": "contains",
+                        "value": "polkadot.network"
+                    }
+                ]
+            }
+        ]
     }
 }
